@@ -45,11 +45,14 @@ if (TYPO3_MODE == 'BE') {
 );
 */
 
-/**
- * Register Custom Content Element
- */
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-    $_EXTKEY,
-    'infographic_section',
-    'LLL:EXT:p72_infographic/Resources/Private/Language/locallang_db.xlf:infographic_section'
+
+// Adds the content element to the "Type" dropdown
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
+    array(
+        'LLL:EXT:p72_infographic/Resources/Private/Language/locallang_db.xlf:infographic_section',
+        'infographic_section',
+        'EXT:p72_infographic/Resources/Public/Images/Backend/InfoSection.svg'
+    ),
+    'CType',
+    $_EXTKEY
 );

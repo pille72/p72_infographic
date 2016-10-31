@@ -4,6 +4,16 @@ if (!defined('TYPO3_MODE')) {
 }
 
 $GLOBALS['TCA']['tt_content']['types']['infographic_section'] = $GLOBALS['TCA']['tt_content']['types']['textmedia'];
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['infographic_section'] = 'tx-p72-infographic-infographic-section';
+
+
+$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+$iconRegistry->registerIcon(
+    'tx-p72-infographic-infographic-section',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:p72_infographic/Resources/Public/Images/Backend/InfoSection.svg']
+);
+
 /**
 
 $GLOBALS['TCA']['tt_content']['types']['slider_images'] = array(
