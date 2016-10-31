@@ -18,3 +18,21 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
     'infographic_section',
     'EXT:p72_infographic/Resources/Public/Images/Backend/InfoSection.svg'
 );
+
+
+$animation_direction = array(
+    'animation_direction' => array(
+        'label'	=> 'LLL:EXT:p72_infographic/Resources/Private/Language/locallang_db.xlf:animation_direction',
+        'config' => array(
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => array(
+                array('down', 'down'),
+                array('right', 'right')
+            ),
+        ),
+    ),
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $animation_direction, 1);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content', 'header', 'animation_direction', 'after:header_position');
