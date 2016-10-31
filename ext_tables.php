@@ -51,5 +51,5 @@ if (TYPO3_MODE == 'BE') {
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     $_EXTKEY,
     'infographic_section',
-    'LLL:EXT:p72_infographic/Resources/Private/Language/locallang.xlf:infographic_section'
+    'LLL:EXT:p72_infographic/Resources/Private/Language/locallang_db.xlf:infographic_section'
 );
