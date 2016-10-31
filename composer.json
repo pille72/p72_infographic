@@ -1,0 +1,17 @@
+{
+  "name": "p72/infographic",
+  "type": "typo3-cms-extension",
+  "version": "x.x.x",
+  "description": "Page template and styles for sample infographics",
+  "require": {
+    "typo3/cms-core": ">=7.6.0,<8.0"
+  },
+  "replace": {
+    "p72_infographic": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "P72\\Infographic\\": "Classes/"
+    }
+  }
+}

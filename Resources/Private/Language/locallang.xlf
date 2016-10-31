@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="p72_infographic">
+        <header/>
+        <body>
+            <trans-unit id="backend_layout.infographic">
+                <source>Infographic</source>
+            </trans-unit>
+
+            <trans-unit id="infographic_section">
+                <source>Infographic Section</source>
+            </trans-unit>
+            <trans-unit id="infographic_section.description">
+                <source>Add a section for infographic</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>
