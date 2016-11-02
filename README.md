@@ -1,3 +1,6 @@
 # p72_infographic
 
-Stuff!!!
+
+## Thanks
+
+Thanks to [clrs](http://clrs.cc/) for color inspiration

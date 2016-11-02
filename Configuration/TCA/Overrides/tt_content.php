@@ -23,26 +23,59 @@ $GLOBALS['TCA']['tt_content']['types']['slider_images'] = array(
      --div--;LLL:EXT:p72_infographic/Resources/Private/Language/locallang_db.xlf:slider_images_header,header'
 );
 */
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = [
     'LLL:EXT:p72_infographic/Resources/Private/Language/locallang.xlf:infographic_section',
     'infographic_section',
     'EXT:p72_infographic/Resources/Public/Images/Backend/InfoSection.svg'
-);
+];
 
 
-$animation_direction = array(
-    'animation_direction' => array(
+$animation_direction = [
+    'animation_direction' => [
         'label'	=> 'LLL:EXT:p72_infographic/Resources/Private/Language/locallang_db.xlf:animation_direction',
-        'config' => array(
+        'config' => [
             'type' => 'select',
             'renderType' => 'selectSingle',
-            'items' => array(
-                array('down', 'down'),
-                array('right', 'right')
-            ),
-        ),
-    ),
-);
+            'items' => [
+                ['down', 'down'],
+                ['right', 'right']
+            ],
+        ],
+    ],
+];
+
+$section_bg_color = [
+    'section_bg_color' => [
+        'label'	=> 'LLL:EXT:p72_infographic/Resources/Private/Language/locallang_db.xlf:section_bg_color',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                ['navy', 'navy'],
+                ['blue', 'blue'],
+                ['aqua', 'aqua'],
+                ['teal', 'teal'],
+                ['olive', 'olive'],
+                ['green', 'green'],
+                ['lime', 'lime'],
+                ['yellow', 'yellow'],
+                ['orange', 'orange'],
+                ['red', 'red'],
+                ['fuchsia', 'fuchsia'],
+                ['purple', 'purple'],
+                ['maroon', 'maroon'],
+                ['white', 'white'],
+                ['gray', 'gray'],
+                ['silver', 'silver'],
+                ['black', 'black'],
+            ],
+        ],
+    ],
+];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $animation_direction, 1);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content', 'header', 'animation_direction', 'after:header_position');
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $section_bg_color, 1);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content', 'header', 'section_bg_color', 'after:header_position');
+

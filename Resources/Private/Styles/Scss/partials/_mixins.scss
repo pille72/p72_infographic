@@ -12,3 +12,11 @@
     @content;
   }
 }
+
+@mixin controls-with-color($color) {
+  .controls {
+    .arrow {
+      border-color: $color;
+    }
+  }
+}

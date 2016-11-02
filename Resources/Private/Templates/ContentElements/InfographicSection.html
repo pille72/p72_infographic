@@ -1,4 +1,6 @@
-<section class="info-stage" data-direction="{f:if(condition: '{data.animation_direction}', then: '{data.animation_direction}', else: 'down')}" id="info-section-{data.uid}">
+<section class="info-stage{f:if(condition: '{data.section_bg_color}', then: ' bg-{data.section_bg_color}')}"
+         data-direction="{f:if(condition: '{data.animation_direction}', then: '{data.animation_direction}', else: 'down')}"
+         id="info-section-{data.uid}">
     <div class="content center">
         <h3>{data.header}</h3>
     </div>

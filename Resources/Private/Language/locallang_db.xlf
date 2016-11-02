@@ -17,6 +17,9 @@
             <trans-unit id="animation_direction">
                 <source>Direction to transition to</source>
             </trans-unit>
+            <trans-unit id="section_bg_color">
+                <source>Background color</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
